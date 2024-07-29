@@ -19,7 +19,7 @@ export class LoginComponent {
       localStorage.setItem('loggedInUser', JSON.stringify(user));
       this.router.navigate(['/home']);
     } else {
-      alert('Invalid credentials');
+      alert('Email ou mot de passe incorrect');
     }
   }
 }

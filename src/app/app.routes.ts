@@ -11,10 +11,10 @@ import { ContactListComponent } from './contact-list/contact-list.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { ContactDetailComponent } from './contact-detail/contact-detail.component';
 
-const appRoutes: Routes = [
+export const appRoutes: Routes = [
     { path: 'signup', component: SignupComponent },
     { path: 'login', component: LoginComponent },
-    { path: 'home', loadComponent: () => import('./home/home.component').then(m => HomeComponent) },
+    { path: 'home', component: HomeComponent },
     { path: 'contact-list', component: ContactListComponent },
     { path: 'contact-form/:id', component: ContactFormComponent },
     { path: 'contact-detail/:id', component: ContactDetailComponent },
