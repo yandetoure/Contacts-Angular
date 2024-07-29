@@ -1,0 +1,28 @@
+<div class="container">
+    <h3>Contact List</h3>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>First Name</th>
+          <th>Number</th>
+          <th>Description</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let contact of contacts; let i = index">
+          <td>{{ contact.name }}</td>
+          <td>{{ contact.firstName }}</td>
+          <td>{{ contact.number }}</td>
+          <td>{{ contact.description }}</td>
+          <td>
+            <button class="btn btn-info" (click)="viewDetail(i)">View</button>
+            <button class="btn btn-warning" (click)="editContact(i)">Edit</button>
+            <button class="btn btn-danger" (click)="deleteContact(i)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
